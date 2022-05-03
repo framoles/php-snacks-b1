@@ -19,11 +19,7 @@ $classe = [
 ];
 
 foreach($classe as $alunno){
-    $somma = 0;
-    foreach($alunno["voti"] as $voto)
-    {
-        $somma += $voto;
-    }
+    $somma = array_sum($alunno["voti"]);
     $media = $somma/count($alunno["voti"]);
     echo $alunno["nome"]." ".$alunno["cognome"]." ".round($media,1)."<br>";
 }
